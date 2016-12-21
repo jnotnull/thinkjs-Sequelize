@@ -1,5 +1,5 @@
 
-Application created by [ThinkJS](http://www.thinkjs.org)
+#thinkjs的ORM采用Sequelize实现
 
 ## Install dependencies
 
