@@ -50,7 +50,7 @@ export default class extends think.base {
         return sequelize;
     }
         /**
-         * 获取 Mongoose 里的 Model
+         * 获取 Seqelize 里的 Model
          * @return {[type]} [description]
          */
     getModel() {
