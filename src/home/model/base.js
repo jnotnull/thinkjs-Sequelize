@@ -1,19 +1,23 @@
 'use strict';
 import Sequelize from 'Sequelize';
+
 /**
  * relation model
  */
 export default class extends think.base {
+    
     /**
      * schema
      * @type {Object}
      */
     schema = {};
+
     /**
      * model instance
      * @type {[type]}
      */
     _model = null;
+
     /**
      * constructor
      * @param  {[type]} name   [description]
@@ -29,10 +33,11 @@ export default class extends think.base {
         this.name = name;
         this.config = think.parseConfig(config);
     }
-        /**
-         * 创建连接
-         * @return {[type]} [description]
-         */
+
+    /**
+     * 创建连接
+     * @return {[type]} [description]
+     */
     getConnection() {
         let user = "";
         if (this.config.user) {
@@ -49,10 +54,11 @@ export default class extends think.base {
 
         return sequelize;
     }
-        /**
-         * 获取 Seqelize 里的 Model
-         * @return {[type]} [description]
-         */
+
+    /**
+     * 获取 Seqelize 里的 Model
+     * @return {[type]} [description]
+     */
     getModel() {
         if (!this._model) {
             let connection = this.getConnection();

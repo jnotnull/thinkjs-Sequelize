@@ -3,6 +3,7 @@
 import base from './base.js';
 
 import Sequelize from 'Sequelize';
+
 /**
  * relation model
  */
@@ -25,7 +26,7 @@ export default class extends base {
   }
   
   addData(data = {}){
-      let Model = this.getModel();
+      let Model = this.getModel('user');
       return Model.create(data);
   }
 
