@@ -53,14 +53,22 @@ var _class = function (_Base) {
 
             case 3:
               data = _context.sent;
-              _context.next = 6;
+
+
+              console.log(data);
+
+              _context.next = 7;
               return model.addData({ id: 2, name2: 'jiyanliang2' });
 
-            case 6:
+            case 7:
               newUser = _context.sent;
+
+
+              console.log(newUser);
+
               return _context.abrupt('return', this.display());
 
-            case 8:
+            case 10:
             case 'end':
               return _context.stop();
           }
