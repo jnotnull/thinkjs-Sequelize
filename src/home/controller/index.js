@@ -7,7 +7,7 @@ export default class extends Base {
    * index action
    * @return {Promise} []
    */
-  indexAction(){
+  async indexAction(){
     let model = this.model("user");
 
     var data = await model.findData({id: 1});

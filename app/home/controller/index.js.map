@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "sources": [
+        "../../../src/home/controller/index.js"
+    ],
+    "names": [
+        "indexAction",
+        "model",
+        "findData",
+        "id",
+        "data",
+        "display"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;AACAC,mB,GAAQ,KAAKA,KAAL,CAAW,MAAX,C;;qBAEKA,MAAMC,QAAN,CAAe,EAACC,IAAI,CAAL,EAAf,C;;;AAAbC,kB;+CAEG,KAAKC,OAAL,E",
+    "file": "../../../src/home/controller/index.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * index action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let model = this.model(\"user\");\n\n    var data = await model.findData({id: 1});\n\n    return this.display();\n  }\n}"
+    ]
+}

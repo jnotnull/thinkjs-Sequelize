@@ -1,0 +1,31 @@
+{
+    "version": 3,
+    "sources": [
+        "../../../src/home/model/user.js"
+    ],
+    "names": [
+        "schema",
+        "id",
+        "type",
+        "INTEGER",
+        "primaryKey",
+        "name2",
+        "STRING",
+        "field",
+        "findData",
+        "where",
+        "Model",
+        "getModel",
+        "findOne",
+        "addData",
+        "data",
+        "create",
+        "init",
+        "args"
+    ],
+    "mappings": "AAAA;;;;;;;;;;;;;;;;AAEA;;;;AAEA;;;;;;AACA;;;;;;;;;;;;;;;gJAKEA,M,GAAS;AACPC,UAAI;AACFC,cAAM,oBAAUC,OADd;AAEFC,oBAAY;AAFV,OADG;AAKPC,aAAO;AACLH,cAAM,oBAAUI,MADX;AAELC,eAAO;AAFF;AALA,K;;;mBAWTC,Q,uBAAoB;AAAA,QAAXC,KAAW,uEAAH,EAAG;;AAChB,QAAIC,QAAQ,KAAKC,QAAL,CAAc,MAAd,CAAZ;AACA,WAAOD,MAAME,OAAN,CAAc,EAAEH,OAAOA,KAAT,EAAd,CAAP;AACH,G;;mBAEDI,O,sBAAkB;AAAA,QAAVC,IAAU,uEAAH,EAAG;;AACd,QAAIJ,QAAQ,KAAKC,QAAL,EAAZ;AACA,WAAOD,MAAMK,MAAN,CAAaD,IAAb,CAAP;AACH,G;;AAED;;;;;;;mBAKAE,I,mBAAa;AAAA;;AAAA,uCAALC,IAAK;AAALA,UAAK;AAAA;;AACX,4CAAMD,IAAN,iDAAcC,IAAd;AACD,G",
+    "file": "../../../src/home/model/user.js",
+    "sourcesContent": [
+        "'use strict';\n\nimport base from './base.js';\n\nimport Sequelize from 'Sequelize';\n/**\n * relation model\n */\nexport default class extends base {\n\n  schema = {\n    id: {\n      type: Sequelize.INTEGER,\n      primaryKey: true\n    },\n    name2: {\n      type: Sequelize.STRING,\n      field: \"name\"\n    }\n  }\n\n  findData(where = {}){\n      let Model = this.getModel('user');\n      return Model.findOne({ where: where });\n  }\n  \n  addData(data = {}){\n      let Model = this.getModel();\n      return Model.create(data);\n  }\n\n  /**\n   * init\n   * @param  {} args []\n   * @return {}         []\n   */\n  init(...args){\n    super.init(...args);\n  }\n}\n"
+    ]
+}
