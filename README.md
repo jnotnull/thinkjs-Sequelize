@@ -26,7 +26,7 @@ Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支�
 		  freezeTableName: true
 		});
 
-为了能在controller中方便的通过`this.model("user")`使用模型，我们在model层进行拓展，模型文件中主要包括两个方法getModel和getConnection
+为了能在controller中方便的通过`this.model("user")`使用模型，我们在model层进行拓展，模型文件中主要包括两个方法getModel和getConnection。
 	
 	/**
      * 创建连接
@@ -65,7 +65,7 @@ Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支�
         return this._model;
     }
 
-因为ThinkJS在调用`this.model('user')`进行实例化模型的时候会自动注入db的config到第二个参数中，所以可以使用构造函数完成db数据的读取
+因为ThinkJS在调用`this.model('user')`进行实例化模型的时候会自动注入db的config到第二个参数中，所以可以使用构造函数完成db数据的读取。
 
 	constructor(name, config = {}) {
         super();
@@ -200,7 +200,7 @@ Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支�
 	    }
 	}
 
-现在就可以在controller中调用模型文件了
+现在就可以在controller中调用模型文件了。
 
 	async indexAction(){
 	    let model = this.model("user");
@@ -219,4 +219,4 @@ Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支�
 	  return Model.create(data);
 	}
 
-controller中的调用 `var data = await model.findData({id: 1});`
+controller中的调用 `var data = await model.findData({id: 1});`。
