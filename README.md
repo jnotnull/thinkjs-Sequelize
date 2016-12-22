@@ -1,11 +1,11 @@
 
 #ThinkJS的ORM采用Sequelize实现
 
-##ThinkJS中内置了ORM，如果你不想使用它，而想换成其它的该怎么做呢？这里就介绍下Sequelize的引入方案。
+ThinkJS中内置了ORM，如果你不想使用它，而想换成其它的该怎么做呢？这里就介绍下Sequelize的引入方案。
 
-##Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支持，包括PostgreSQL, MySQL, MariaDB, SQLite 和 MSSQL。
+Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支持，包括PostgreSQL, MySQL, MariaDB, SQLite 和 MSSQL。
 
-##在引入Sequelize之前，我们先看下Sequelize的建立连接和定义模型的方式：
+在引入Sequelize之前，我们先看下Sequelize的建立连接和定义模型的方式：
 
 1. 建立连接
 
@@ -26,7 +26,7 @@
 	  freezeTableName: true
 	});
 
-##为了能在controller中方便的通过`this.model("user")`使用模型，我们在model层进行拓展，模型文件中主要包括两个方法getModel和getConnection
+为了能在controller中方便的通过`this.model("user")`使用模型，我们在model层进行拓展，模型文件中主要包括两个方法getModel和getConnection
 	
 	/**
      * 创建连接
@@ -200,7 +200,7 @@
 	    }
 	}
 
-##现在就可以在controller中调用模型文件了
+现在就可以在controller中调用模型文件了
 
 	async indexAction(){
 	    let model = this.model("user");
