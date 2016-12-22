@@ -11,14 +11,11 @@
         "data",
         "console",
         "log",
-        "addData",
-        "name2",
-        "newUser",
         "display"
     ],
-    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;AACAC,mB,GAAQ,KAAKA,KAAL,CAAW,MAAX,C;;qBAEKA,MAAMC,QAAN,CAAe,EAACC,IAAI,CAAL,EAAf,C;;;AAAbC,kB;;;AAEJC,sBAAQC,GAAR,CAAYF,IAAZ;;;qBAEoBH,MAAMM,OAAN,CAAc,EAACJ,IAAG,CAAJ,EAAOK,OAAO,aAAd,EAAd,C;;;AAAhBC,qB;;;AAEJJ,sBAAQC,GAAR,CAAYG,OAAZ;;+CAEO,KAAKC,OAAL,E",
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;AAEA;;;;;;;;;;;;;;AAGE;;;;mBAIMA,W;;;;;;;AACAC,mB,GAAQ,KAAKA,KAAL,CAAW,MAAX,C;;qBAEKA,MAAMC,QAAN,CAAe,EAACC,IAAI,CAAL,EAAf,C;;;AAAbC,kB;;;AAEJC,sBAAQC,GAAR,CAAYF,IAAZ;;AAEA;;AAEA;;+CAEO,KAAKG,OAAL,E",
     "file": "../../../src/home/controller/index.js",
     "sourcesContent": [
-        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * index action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let model = this.model(\"user\");\n\n    var data = await model.findData({id: 1});\n\n    console.log(data);\n\n    var newUser = await model.addData({id:2, name2: 'jiyanliang2'});\n\n    console.log(newUser);\n\n    return this.display();\n  }\n}"
+        "'use strict';\n\nimport Base from './base.js';\n\nexport default class extends Base {\n  /**\n   * index action\n   * @return {Promise} []\n   */\n  async indexAction(){\n    let model = this.model(\"user\");\n\n    var data = await model.findData({id: 1});\n\n    console.log(data);\n\n    // var newUser = await model.addData({id:2, name2: 'jiyanliang2'});\n\n    // console.log(newUser);\n\n    return this.display();\n  }\n}"
     ]
 }

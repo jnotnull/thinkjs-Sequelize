@@ -21,12 +21,12 @@ export default class extends base {
   }
 
   findData(where = {}){
-      let Model = this.getModel('user');
+      let Model = this.getModel();
       return Model.findOne({ where: where });
   }
   
   addData(data = {}){
-      let Model = this.getModel('user');
+      let Model = this.getModel();
       return Model.create(data);
   }
 

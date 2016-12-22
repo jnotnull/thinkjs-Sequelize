@@ -10,10 +10,10 @@ export default {
   adapter: {
     mysql: {
       host: '127.0.0.1',
-      port: '',
+      port: '3306',
       database: 'test',
       user: 'root',
-      password: '*****',
+      password: '252210289@qq.com',
       prefix: '',
       encoding: "utf8mb4"
     },

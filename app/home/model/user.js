@@ -54,7 +54,7 @@ var _class = function (_base) {
   _class.prototype.findData = function findData() {
     var where = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-    var Model = this.getModel('user');
+    var Model = this.getModel();
     return Model.findOne({ where: where });
   };
 

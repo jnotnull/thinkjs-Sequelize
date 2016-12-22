@@ -33,6 +33,7 @@ var _class = function (_think$base) {
      * @return {[type]}        [description]
      */
 
+
     /**
      * schema
      * @type {Object}
@@ -54,10 +55,12 @@ var _class = function (_think$base) {
         _this.config = think.parseConfig(config);
         return _this;
     }
+
     /**
      * 创建连接
      * @return {[type]} [description]
      */
+
 
     /**
      * model instance
@@ -81,8 +84,9 @@ var _class = function (_think$base) {
 
         return sequelize;
     };
+
     /**
-     * 获取 Mongoose 里的 Model
+     * 获取 Seqelize 里的 Model
      * @return {[type]} [description]
      */
 

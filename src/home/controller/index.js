@@ -14,9 +14,9 @@ export default class extends Base {
 
     console.log(data);
 
-    var newUser = await model.addData({id:2, name2: 'jiyanliang2'});
+    // var newUser = await model.addData({id:2, name2: 'jiyanliang2'});
 
-    console.log(newUser);
+    // console.log(newUser);
 
     return this.display();
   }

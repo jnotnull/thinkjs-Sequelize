@@ -42,7 +42,7 @@ var _class = function (_Base) {
    */
   _class.prototype.indexAction = function () {
     var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {
-      var model, data, newUser;
+      var model, data;
       return _regenerator2.default.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -57,18 +57,13 @@ var _class = function (_Base) {
 
               console.log(data);
 
-              _context.next = 7;
-              return model.addData({ id: 2, name2: 'jiyanliang2' });
+              // var newUser = await model.addData({id:2, name2: 'jiyanliang2'});
 
-            case 7:
-              newUser = _context.sent;
-
-
-              console.log(newUser);
+              // console.log(newUser);
 
               return _context.abrupt('return', this.display());
 
-            case 10:
+            case 6:
             case 'end':
               return _context.stop();
           }
