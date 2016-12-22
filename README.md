@@ -1,5 +1,5 @@
 
-#ThinkJS的ORM采用Sequelize实现
+#使用Sequelize作为ThinkJS的ORM
 
 ThinkJS中内置了ORM，如果你不想使用它，而想换成其它的该怎么做呢？这里就介绍下Sequelize的引入方案。
 
