@@ -9,22 +9,22 @@ Sequelize是一款基于Promise的优秀ORM，它提供了主流数据库的支�
 
 1. 建立连接
 
-	var sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname');
+		var sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname');
 
 2. 定义模型
 
-	var User = sequelize.define('user', {
-	 	id: {
-	      type: Sequelize.INTEGER,
-	      primaryKey: true
-	    },
-	    name2: {
-	      type: Sequelize.STRING,
-	      field: "name"
-	    }
-	}, {
-	  freezeTableName: true
-	});
+		var User = sequelize.define('user', {
+		 	id: {
+		      type: Sequelize.INTEGER,
+		      primaryKey: true
+		    },
+		    name2: {
+		      type: Sequelize.STRING,
+		      field: "name"
+		    }
+		}, {
+		  freezeTableName: true
+		});
 
 为了能在controller中方便的通过`this.model("user")`使用模型，我们在model层进行拓展，模型文件中主要包括两个方法getModel和getConnection
 	
